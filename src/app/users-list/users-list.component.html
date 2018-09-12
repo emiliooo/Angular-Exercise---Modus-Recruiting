@@ -3,7 +3,7 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Lastname</th>
+      <th scope="col">Username</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
     </tr>
@@ -12,7 +12,7 @@
     <tr *ngFor="let customer of customers">
       <th scope="row">{{customer.id}}</th>
       <td>{{customer.name}}</td>
-      <td>{{customer.name}}</td>
+      <td>{{customer.username}}</td>
       <td>{{customer.email}}</td>
       <td>{{customer.phone}}</td>
       <td><button class="btn btn-info" routerLink="/detail/{{customer.id}}">Details</button></td>

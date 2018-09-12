@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserService } from './core/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomeComponent,
     LandingComponent,
-    UsersListComponent
+    UsersListComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

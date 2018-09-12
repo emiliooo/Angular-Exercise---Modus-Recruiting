@@ -15,4 +15,8 @@ export class UserService {
     return this.httpClient.get(`${this.config.apiUrl}/users`);
   }
 
+  getUser(id) {
+    return this.httpClient.get(`${this.config.apiUrl}/users/${id}`);
+  }
+
 }

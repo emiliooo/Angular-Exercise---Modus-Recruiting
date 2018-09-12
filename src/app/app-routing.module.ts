@@ -3,20 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 const routes: Routes = [{
-  path: 'landing',
-  component: LandingComponent
-}, {
-  path: 'home',
-  component: HomeComponent
-}, {
   path: 'users',
   component: UsersListComponent
 }, {
+  path: 'detail/:id', component: UserDetailComponent
+},{
+  path: 'home',
+  component: HomeComponent
+}, {
+  path: 'landing',
+  component: LandingComponent
+}, {
   path: '**',
-  redirectTo: 'landing'
+  redirectTo: 'users'
 }];
 
 @NgModule({

@@ -11,6 +11,7 @@ export class UsersListComponent implements OnInit {
   customers: any;
   constructor(private userService: UserService ) { }
 
+
   ngOnInit() {
     this.loadData();
   }
