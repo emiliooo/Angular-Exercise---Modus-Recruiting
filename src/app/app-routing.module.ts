@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
+import { UsersListComponent } from './users-list/users-list.component';
+
 
 const routes: Routes = [{
   path: 'landing',
@@ -10,12 +12,15 @@ const routes: Routes = [{
   path: 'home',
   component: HomeComponent
 }, {
+  path: 'users',
+  component: UsersListComponent
+}, {
   path: '**',
   redirectTo: 'landing'
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

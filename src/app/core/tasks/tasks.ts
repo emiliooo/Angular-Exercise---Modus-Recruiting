@@ -1,4 +1,3 @@
-
 export interface Task {
   description: string;
   links?: Array<string>;
