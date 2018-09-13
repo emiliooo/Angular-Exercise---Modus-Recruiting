@@ -34,6 +34,7 @@ export class AppContentComponent implements OnInit {
    */
   login() {
     this.isLoggedIn = true;
+    this.logouted.emit(this.isLoggedIn);
   }
 
   /**

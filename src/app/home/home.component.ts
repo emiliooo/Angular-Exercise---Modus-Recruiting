@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   selectOut(sts) {
-    //this.logged.emit(this.isLoggedIn);
+    this.state = sts;
   }
 
 
