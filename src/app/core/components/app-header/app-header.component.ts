@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { User } from '../../models/user.model';
 
 @Component({
@@ -7,6 +7,10 @@ import { User } from '../../models/user.model';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
+
+  @Output()
+  logged: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   user: User = {
     firstName: 'Ahsan',
     lastName: 'Ayaz'
@@ -24,6 +28,7 @@ export class AppHeaderComponent implements OnInit {
    */
   login() {
     this.isLoggedIn = true;
+    this.logged.emit(this.isLoggedIn);
   }
 
   /**
@@ -40,6 +45,7 @@ export class AppHeaderComponent implements OnInit {
    */
   logout() {
     this.isLoggedIn = false;
+    this.logged.emit(this.isLoggedIn);
   }
 
 }

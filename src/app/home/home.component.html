@@ -1,2 +1,2 @@
-<ng-e-app-header></ng-e-app-header>
-<ng-e-app-content></ng-e-app-content>
+<ng-e-app-header (logged)="select($event)" ></ng-e-app-header>
+<ng-e-app-content [isLoggedIn]="state" (logouted)="selectOut($event)"></ng-e-app-content>

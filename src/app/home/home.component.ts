@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'ng-e-home',
@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  @Output()
+  state: boolean;
+
   constructor() { }
+
+  select(sts) {
+    this.state = sts;
+  }
+
+  selectOut(sts) {
+    //this.logged.emit(this.isLoggedIn);
+  }
+
 
   ngOnInit() {
   }

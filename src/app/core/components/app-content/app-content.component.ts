@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { User } from '../../models/user.model';
 
 @Component({
@@ -11,11 +11,21 @@ export class AppContentComponent implements OnInit {
     firstName: 'Ahsan',
     lastName: 'Ayaz'
   };
+
+  @Input()
   isLoggedIn: boolean;
+
+  @Output()
+  logouted: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
     this.isLoggedIn = false;
+  }
+
+  ShowState(state) {
+    console.log(state);
   }
 
   /**
@@ -32,6 +42,7 @@ export class AppContentComponent implements OnInit {
    */
   logout() {
     this.isLoggedIn = false;
+    this.logouted.emit(this.isLoggedIn);
   }
 
 }

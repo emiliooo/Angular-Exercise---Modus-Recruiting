@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
-import { UsersListComponent } from './users-list/users-list.component';
 import { UserService } from './core/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserListModule } from './users-list/user-list-module/user-list.module';
+
 
 
 @NgModule({
@@ -16,14 +17,17 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AppComponent,
     HomeComponent,
     LandingComponent,
-    UsersListComponent,
     UserDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    UserListModule
+  ],
+  exports: [
+    UserListModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

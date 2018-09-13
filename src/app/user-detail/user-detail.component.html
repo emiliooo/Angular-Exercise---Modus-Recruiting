@@ -1,4 +1,16 @@
-
-      
-    {{ user.name }}
-    
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-block ">
+        <h4 class="card-title text-center">Info</h4>
+        <img src="https://placehold.it/320x180" alt="pic_with_face">
+        <p class="card-text"> <label>Name : </label> {{user.name}} </p>
+        <p class="card-text"> <label>Email : </label> {{user.email}} </p>
+        <p class="card-text"> <label>Phone : </label> {{user.phone}} </p>
+        <p class="card-text"> <label>Website : </label> {{user.website}} </p>
+        <p class="card-text"> <label>City : </label> {{user.address.city}} </p>
+        <a routerLink="/users" class="btn btn-primary">Back to main</a>
+      </div>
+    </div>
+  </div>
+</div>

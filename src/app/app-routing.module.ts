@@ -11,7 +11,7 @@ const routes: Routes = [{
   component: UsersListComponent
 }, {
   path: 'detail/:id', component: UserDetailComponent
-},{
+}, {
   path: 'home',
   component: HomeComponent
 }, {
